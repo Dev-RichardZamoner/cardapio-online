@@ -1,0 +1,8 @@
+{
+  "name": "CARDAPIO-ONLINE",
+  "version": "1.0.0",
+  "scripts": {
+    "build-css": "tailwindcss -i ./assents/css/tailwind.css -o ./public/css/style.css --watch"
+  }
+
+}
