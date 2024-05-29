@@ -65,6 +65,16 @@ unset($conn);
 </head>
 
 <body class="flex items-center justify-center min-h-screen bg-gray-100">
+<main class="flex-grow container mx-auto p-6">
+        <section class="mb-10">
+            <h2 class="text-3xl font-bold text-center mb-6">Crie o seu cardápio online</h2>
+            <p class="text-center text-gray-500">Comece a montar seu cardápio digital agora mesmo e ofereça uma experiência única aos seus clientes.</p>
+            <div class="flex justify-center mt-4">
+                <a href="./login.php" class="px-4 py-2 mr-2 text-white bg-blue-500 rounded hover:bg-blue-700">Login</a>
+                <a href="./registro.php" class="px-4 py-2 text-white bg-green-500 rounded hover:bg-green-700">Registrar</a>
+            </div>
+        </section>
+</main>
     
     <div class="w-full max-w-xs">
         <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

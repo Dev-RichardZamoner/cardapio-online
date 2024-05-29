@@ -75,67 +75,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Registro</title>
-    <!-- Adicione aqui o link para seus estilos CSS se necessário -->
-    <style>
-        /* Estilos básicos para o formulário, substitua com seu próprio CSS se necessário */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            box-sizing: border-box; /* Adiciona padding dentro do width e height */
-        }
-        input[type="submit"] {
-            background-color: #5cb85c;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #4cae4c;
-        }
-        .error {
-            color: red;
-            font-size: 0.8em;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <form action="registro.php" method="post">
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" name="email" id="email" required>
-            <!-- Mensagem de erro para o email, se necessário -->
-            <div class="error"><?php echo $erro_email; ?></div>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <form action="registro.php" method="post" class="bg-white p-10 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold mb-6 text-center">Registrar</h2>
+        <div class="mb-4">
+            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+            <input type="email" name="email" id="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            <div class="error text-red-500 text-xs italic"><?php echo $erro_email; ?></div>
         </div>
-        <div>
-            <label for="senha">Senha:</label>
-            <input type="password" name="senha" id="senha" required>
-            <!-- Mensagem de erro para a senha, se necessário -->
-            <div class="error"><?php echo $erro_senha; ?></div>
+        <div class="mb-4">
+            <label for="senha" class="block text-gray-700 text-sm font-bold mb-2">Senha:</label>
+            <input type="password" name="senha" id="senha" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline">
+            <div class="error text-red-500 text-xs italic"><?php echo $erro_senha; ?></div>
         </div>
-        <div>
-            <input type="submit" value="Registrar">
+        <div class="mb-4">
+            <label class="inline-flex items-center">
+                <input type="checkbox" required class="form-checkbox text-indigo-600">
+                <span class="ml-2 text-gray-700 text-sm">Não sou um robô</span>
+            </label>
+        </div>
+        <div class="flex items-center justify-between">
+            <input type="submit" value="Registrar" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
         </div>
     </form>
 </body>
